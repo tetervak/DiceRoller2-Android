@@ -13,9 +13,6 @@ class MainViewModel @Inject constructor(
     private val game: DiceGame
 ): ViewModel() {
 
-    // in a perfect app, this game object should be in the data layer
-    private val game = DiceGame(numberOfDice = 3)
-
     private val _liveRollData = MutableLiveData<RollData?>(game.rollData)
     val liveRollData: LiveData<RollData?> = _liveRollData
 
